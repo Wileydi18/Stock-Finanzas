@@ -102,3 +102,9 @@
 .tema-oscuro button {
   color: #ffffff;
 }
+
+/* Resalta la página activa en la barra de navegación */
+.navbar-links a.activo {
+  font-weight: bold;
+  text-decoration: underline;
+}
