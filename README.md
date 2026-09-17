@@ -1,16 +1,69 @@
-# React + Vite
+# Stock - Finanzas
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplicación web desarrollada con React y Vite para consultar información de acciones y administrar un portafolio personal.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Búsqueda de acciones por ticker.
+- Consulta de precio actual, máximo y mínimo del día.
+- Consumo de la API de Finnhub.
+- Agregar acciones al portafolio.
+- Eliminar acciones del portafolio.
+- Persistencia de datos mediante localStorage.
+- Navegación mediante React Router.
+- Ruta dinámica para consultar el detalle de una acción.
+- Página 404 para rutas no encontradas.
+- Tema claro y oscuro mediante Context API.
+- Filtrado de acciones dentro del portafolio.
 
-## React Compiler
+## Tecnologías utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
+- React Router DOM
+- Finnhub API
+- LocalStorage
+- Context API
 
-## Expanding the Oxlint configuration
+## Hooks utilizados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+El proyecto utiliza hooks de React como:
+
+- useState
+- useEffect
+- useMemo
+- useCallback
+- useContext
+
+También incluye Custom Hooks:
+
+- useFetch
+- useLocalStorage
+
+## Rutas
+
+- `/` - Página de inicio.
+- `/buscar` - Búsqueda de acciones.
+- `/portafolio` - Portafolio de acciones.
+- `/accion/:id` - Detalle de una acción.
+- `*` - Página 404.
+
+## Instalación
+
+Instalar las dependencias:
+
+npm install
+
+Ejecutar el proyecto:
+
+npm run dev
+
+## Variables de entorno
+
+Para utilizar la API de Finnhub se debe crear un archivo `.env` en la raíz del proyecto con:
+
+VITE_FINNHUB_API_KEY=TU_API_KEY
+
+El archivo `.env` está excluido del repositorio mediante `.gitignore` para proteger la API Key.
